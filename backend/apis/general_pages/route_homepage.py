@@ -16,3 +16,7 @@ general_pages_router = APIRouter()
 @general_pages_router.get("/")
 async def home(request: Request):
     return templates.TemplateResponse("general_pages/homepage.html", {"request":request})
+
+@general_pages_router.get("/about")
+async def home(request: Request):
+    return templates.TemplateResponse("general_pages/about.html", {"request":request})
